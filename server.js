@@ -6,24 +6,22 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-// Simulated database of transactions
 let transactions = [];
 
 app.post("/pay", (req, res) => {
     const { userId, amount, currency, method } = req.body;
-    
+
     if (!userId || !amount || !currency || !method) {
         return res.status(400).json({ error: "Missing payment details" });
     }
 
-    // Simulate payment processing
-    const transactionId = "TXN" + Math.floor(Math.random() * 1000000);
+    const transactionId = "VIRAL" + Math.floor(Math.random() * 1000000);
     transactions.push({ transactionId, userId, amount, currency, method, status: "Processing" });
 
     res.json({
         transactionId,
         status: "Payment request received",
-        message: "Your transaction is being processed."
+        message: "Your transaction with ViralizePay is being processed."
     });
 });
 
