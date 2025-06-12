@@ -3,22 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Gateway Test</title>
+    <title>Payment Gateway Comparison</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        table { width: 80%; margin: auto; border-collapse: collapse; }
+        th, td { border: 1px solid black; padding: 10px; }
+        th { background-color: #f4f4f4; }
+    </style>
 </head>
 <body>
-    <h2>Make a Payment</h2>
-    <form id="paymentForm">
-        <input type="text" id="name" placeholder="Name" required><br>
-        <input type="email" id="email" placeholder="Email" required><br>
-        <input type="number" id="amount" placeholder="Amount" required><br>
-        <button type="submit">Pay</button>
-    </form>
-    <script>
-        document.getElementById("paymentForm").addEventListener("submit", async function(event) {
-            event.preventDefault();
-            const response = await fetch('/pay', { method: 'POST' });
-            alert("Payment request sent!");
-        });
-    </script>
+    <h2>Compare Payment Gateways</h2>
+    <table>
+        <tr>
+            <th>Provider</th>
+            <th>Transaction Fee</th>
+            <th>Processing Time</th>
+            <th>Features</th>
+        </tr>
+        <tr>
+            <td>PayFast</td>
+            <td>1.5%</td>
+            <td>Instant</td>
+            <td>Fast transfers, supports UPI</td>
+        </tr>
+        <tr>
+            <td>SecurePay</td>
+            <td>2%</td>
+            <td>1-2 days</td>
+            <td>High security, fraud detection</td>
+        </tr>
+        <tr>
+            <td>QuickWallet</td>
+            <td>1.8%</td>
+            <td>Same day</td>
+            <td>Easy integration, multi-currency</td>
+        </tr>
+    </table>
 </body>
 </html>
