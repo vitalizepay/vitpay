@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitalizePay - Multi-Platform Payment Gateway</title>
+</head>
+<body>
+    <h1>VitalizePay - Payment Gateway Integration</h1>
+    
+    <h2>BPPS Payment Service</h2>
+    <form action="https://bpps-payment.com/process" method="POST">
+        <label for="bpps-amount">Enter Amount (INR):</label>
+        <input type="text" id="bpps-amount" name="amount" required>
+        <button type="submit">
+            Pay with BPPS <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Indian_Rupee_symbol.svg" alt="Rupee Symbol" width="15">
+        </button>
+    </form>
+    
+    <h2>Stripe Payment Service</h2>
+    <form action="https://checkout.stripe.com/pay" method="POST">
+        <script src="https://checkout.stripe.com/checkout.js"
+                class="stripe-button"
+                data-key="your-stripe-public-key"
+                data-amount="5000"
+                data-name="Stripe Payment"
+                data-description="Complete your payment"
+                data-currency="INR">
+        </script>
+    </form>
+
+    <h2>Payment Service Images</h2>
+    <img src="https://pixabay.com/images/search/payment%20service/" alt="Payment Service Image" width="300">
+    <img src="https://openverse.org/" alt="Open Source Payment Image" width="300">
+    <img src="https://www.freepik.com/free-photos-vectors/payment-system" alt="Payment System Image" width="300">
+
+    <p>All transactions will be processed in <b>Indian Rupees (INR)</b> <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Indian_Rupee_symbol.svg" alt="Rupee Symbol" width="20"></p>
+</body>
+</html>
